@@ -1,0 +1,14 @@
+/*
+    Document   : Indexstyle.css
+    Created on : 2015-09-01 08:08 PM
+    Author     : kylep
+    Description:
+    Purpose of the stylesheet follows.
+    To change this template use Tools | Templates.
+*/
+
+root {
+    display: block;
+}
+h1{
+    background-color:red;}

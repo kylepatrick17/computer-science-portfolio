@@ -12,11 +12,13 @@ function doMath() {
         answer = parseInt(input1.value) + parseInt(input2.value);
         display.innerHTML = answer;
     }
+    //This code says that if the user picks addition as the function then add.
     if  (dropdown.value == "-"){
         answer = parseInt(input1.value) - parseInt(input2.value);
         display.innerHTML = answer;
     
     }
+    //
     if  (dropdown.value == "/"){
         answer = parseInt(input1.value) / parseInt(input2.value);
         display.innerHTML = answer;

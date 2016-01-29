@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+        p { font-size:30px;}
+        
+        body{
+            
+            background-size: 100%
+        }
+        
+        h {
+            font-size:40px;
+        }
+       
+            
+        </style>
+        <title>document</title>
+         </head>
+    <body style="background-image:url('https://www.wpclipart.com/recreation/sports/soccer/soccer_field.png')">
+        <h>Soccer stat calculator</h><br>
+        <p>What position?</p>
+        <select id = "positionDropMenu">
+            <option/>
+            <option value="goalkeeper">Goalkeeper</option>
+            <option value="defender">Defender</option>
+            <option value="midfielder">Midfielder</option>
+            <option value="attacker">Attacker</option>
+        </select><br>
+        <p>How many games <br>were played?</p>
+        <input type ="text" name="gamesPlayedInput" style="width:50px;" id="gamesPlayedInput">
+        <p id = "question"></p>
+        
+    
+        <input type ="text" name="positionalStatInput" style="width:50px;" id="positionalStatInput"><br>
+    <br><input type="button" value="Calculate" id="submitButton" />
+    <p>Per match: <span id="display"></span></p>
+        
+        <script type="text/javascript" src="stat-calc.js"></script>
+    </body>
+</html>

@@ -1,17 +1,33 @@
 <!DOCTYPE html>
 <html>
+
 <head>
+  <style type="text/css">
+    #the{
+      left:200;
+      top:488;} 
+      html {
+    background-image:url("http://www.systhread.net/texts/200511gimp-img/plasma_ab.jpg");
+}
+html{color:red}
+    
+  </style>
+  	<link rel="stylesheet" type="text/css" href="todolist.css">
   <title></title>
 </head>
 <body>
   <header><h1></h1></header>
   <section>
-    <div id="todolist"></div>
-    <form id="myform">
+    <div id="todo"></div>
+    <form id="form">
       <div>
-        <div>Add item</div>
-        <input type="text" id="newitem" />
+        <div id = "the">Add item</div>
+        <input type="text" id="field" />
+      
         <input type="submit" />
+        <input type="reset" value="Reset"><br>
+          <button id="deleteAll">Delete All</button>
+  
       </div>
     </form>
   </section>

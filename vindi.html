@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            
+        </style>
+        <title>
+            My Vindinium Bot
+        </title>
+    </head>
+    <body>
+        <h1>My Bot</h1>
+        <li>Name: Kyle_</li>
+        <li>Purpose: Capture mines and gain more gold than the other bots.</li>
+        <li>Uses javascript to attack enemy bots, capture mines and go to taverns.</li>
+        <br>
+        <br>   
+        <h2>Kyle_Bot Says "Hi"</h2>
+        <img src="http://vindinium.org/assets/img/ui/player3.png" width="150" height="150">
+        <div>Hi I'm Kyle_Bot! I'm a bot that fights other bots on vindinium.org.<br>
+        I have three functions:
+        <li>Capture Mines</li>
+        <li>Go to taverns</li>
+        <li>Attack other bot</li></div>
+        <br>
+        <h3>Bot Decision Making Process</h3>
+        <code>
+            <pre>
+                 if(bot.yourBot.life < 60 ){
+            task = "taverns";
+        }
+        else{
+            task = "freemines";
+        }                     
+            </pre>
+        </code>
+        <p>This if else statement tells my bot what to do based on how much health it has.
+        <br>If my bot has less than 60 health then it will perform the task taverns.
+        If my bot is at 60 health or above my bot will perform the task freemines.</p>
+        <h3>Capturing Mines</h3><br>
+        <code>
+            <pre>
+                if(task === "freemines") {4
+            var closestMine = bot.freeMines[0];
+            for(i = 0; i < bot.freeMines.length; i++) {
+                if(bot.findDistance(myPos, closestMine) > bot.findDistance(myPos, bot.freeMines[i])) {
+                    closestMine = bot.freeMines[i];
+                }
+            </pre>
+        </code>
+        <p>This code is responsible for my bot being able to capture mines. This code works
+        by <br> figuring out what the task is to be completed and if the task id "freemines"
+        the code gets run. This code starts by identifying how many mines there are and where they are on the map.
+        <br> Then my bot finds which mine is the closest. After finding the closest mine the bot finds the best
+        <br> route to get to the mine.
+        </p>
+        <h4>Going to Taverns</h4><br>
+        <code>
+            <pre>
+                 if(task === "taverns")  {
+            var closestTavern = bot.taverns[0]; 
+                for(i= 0; i < bot.taverns.length; i++) {
+                if(bot.findDistance(myPos,  closestTavern) > bot.findDistance(myPos, bot.taverns[i])) {
+                    closestTavern = bot.taverns[i];
+            </pre>
+        </code>
+        <p>This code is responsible for my bot being able to go to taverns. This code works
+        by <br> figuring out what task is to be completed and if the task id reads "taverns"
+        the code gets run. This code starts by identifying how many taverns there are and where they are on the map.
+        <br> Then my bot finds which tavern is the closest. After finding the closest tavern the bot finds the best
+        <br> route to get to the tavern.
+        </p>
+        <h5>Attacking Bots</h5><br>
+        <code>
+            <pre>
+                var closestBot = bot.enemyBots[0];
+            for(i = 0; i < bot.enemyBots.length; i++) {
+                if(bot.findDistance(myPos, closestMine) > bot.findDistance(myPos, bot.enemyBots[i])) {
+                    closestBot = bot.enemyBots[i];
+                }
+            }
+            console.log("CHAAARRRGGGEE!");
+            myDir = bot.findPath(myPos, closestBot);
+            </pre>
+        </code>
+        <p>This code tells my robot when to attack other bots. My robot a My robot attacks when it is closer to an enemybot than a freemine 
+        then the bot will try to attack the nearby bot. This code works by identifying where the bots are on the map
+        and then find how far away enemy bots are and if an enemy bot is closer to my bot than
+        a mine my bot will find a path to the bot and go there re routing if needed every turn also if a mine opens up that is closer
+        to my bot than the enemy bot my bot will disengage and go for the mine.
+        </p>
+        <h3>What I learned</h3>
+        <p>For the most part my bot did what I wanted to do. My bot attacks other bots it takes free mines and 
+        <br>goes to taverns. The code was simple but I had a hard time figuring it out. I have a different view on ai as I didn't
+        quite understand how some ai works. Originally I thought ai was some magical thing but after programming the bot I relized that 
+        some ai can be as simple as a decision tree responding to external inputs.<br>
+        My opinion of ai has changed a lot I think that ai presents an interesting future that will have more
+        efficient work force that also has less needs.</p>
+    </body>
+</html>

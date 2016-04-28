@@ -17,7 +17,7 @@ form.addEventListener( 'submit', function(evt) {
 todo.addEventListener( 'click', function(evt) {
   var tar = evt.target;
   tar.parentNode.removeChild(tar);
-  //removes to do item when you click
+  //removes to do item when you click 
   evt.preventDefault();
 }, false);
 deleteAll.addEventListener('click',function(evt) {
